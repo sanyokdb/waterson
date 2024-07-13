@@ -29,3 +29,17 @@ const heroSlider = new Swiper(".hero-slider", {
     }
   },
 });
+
+
+const partnersSlider = new Swiper(".partners-slider", {
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 4500,
+  },
+  navigation: {
+    nextEl: ".partners-slider__navigation-next",
+    prevEl: ".partners-slider__navigation-prev",
+  },
+});
