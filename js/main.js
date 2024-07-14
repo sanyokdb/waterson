@@ -36,10 +36,9 @@ const partnersSlider = new Swiper(".partners-slider", {
   slidesPerView: 3,
   spaceBetween: 30,
   autoplay: {
-    delay: 4500,
+    delay: 0,
+    pauseOnMouseEnter: true,
+    disableOnInteraction: false,
   },
-  navigation: {
-    nextEl: ".partners-slider__navigation-next",
-    prevEl: ".partners-slider__navigation-prev",
-  },
+  speed: 3000,
 });
