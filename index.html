@@ -5,16 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Waterson Development</title>
   <link href="./libs/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="./css/main.css" rel="stylesheet">
+  <link href="./css/main.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
   
-  <header class="header">
+  <header class="header" id="headerScrolled">
     <div class="container header__container">
       <a class="logo header__logo" href="#!">
         <img class="logo__img" src="./img/logo-light.png" width="193" height="60" alt="Waterson Developmet">
       </a>
-      <nav class="nav header__nav">
+      <nav class="nav header__nav" id="nav">
         <ul class="nav__list">
           <li class="nav__item"><a class="nav__link" href="#!">Home</a></li>
           <li class="nav__item"><a class="nav__link" href="#!">About us</a></li>
@@ -24,8 +25,14 @@
         </ul>
       </nav>
       <a class="header__phone" href="tel:+998901300053">+998 (90) 130-00-53</a>
+      <button class="btn-reset burger" id="burger">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
     </div>
   </header>
+
   <main>
     <section class="hero">
       <div class="container hero__container">
@@ -69,7 +76,7 @@
       </div>
     </section>
 
-    <section class="about">
+    <section class="about d-none">
       <div class="container grid">
         <div class="about__content">
           <h2 class="title about__title">
@@ -86,7 +93,7 @@
       </div>
     </section>
 
-    <section class="decisions">
+    <section class="decisions d-none">
       <div class="decisions__container">
         <div class="decisions__gradient">
           <div class="decisions__items grid">
@@ -119,7 +126,7 @@
       </div>
     </section>
 
-    <section class="services">
+    <section class="services d-none">
       <div class="container grid">
         <div class="services__content">
           <h2 class="title services__title">
@@ -142,7 +149,7 @@
       </div>
     </section>
 
-    <section class="partners">
+    <section class="partners d-none">
       <div class="container">
         <h2 class="title partners__title">
           <span class="title__big">Partners</span>
@@ -192,17 +199,17 @@
     
   </main>
 
-  <footer class="footer">
+  <footer class="footer d-none">
     <div class="footer__top">
       <div class="container footer__top-container">
         <div class="footer__left">
           <a class="logo footer__logo" href="#!"><img class="logo__img" src="./img/logo-light.png" width="193" height="60" alt="Waterson Developmet"></a>
           <div class="footer__social">
-            <a class="footer__social-link" href="#!"><img src="./img/icon/soc-facebook.svg" alt="facebook"></a>
-            <a class="footer__social-link" href="#!"><img src="./img/icon/soc-youtube.svg" alt="youtube"></a>
-            <a class="footer__social-link" href="#!"><img src="./img/icon/soc-instagram.svg" alt="instagram"></a>
-            <a class="footer__social-link" href="#!"><img src="./img/icon/soc-vk.svg" alt="vk"></a>
-            <a class="footer__social-link" href="#!"><img src="./img/icon/soc-telegram.svg" alt="telegram"></a>
+            <a class="footer__social-link" href="#!"><img src="./img/icon/soc-facebook.svg" width="34" height="34" alt="facebook"></a>
+            <a class="footer__social-link" href="#!"><img src="./img/icon/soc-youtube.svg" width="34" height="34" alt="youtube"></a>
+            <a class="footer__social-link" href="#!"><img src="./img/icon/soc-instagram.svg" width="34" height="34" alt="instagram"></a>
+            <a class="footer__social-link" href="#!"><img src="./img/icon/soc-vk.svg" width="34" height="34" alt="vk"></a>
+            <a class="footer__social-link" href="#!"><img src="./img/icon/soc-telegram.svg" width="34" height="34" alt="telegram"></a>
           </div>
         </div>
         <ul class="list-reset footer__nav">
@@ -235,6 +242,12 @@
       </div>
     </div>
   </footer>
+
+  <div class="scrollup" id="scrollUp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="scrollup__icon" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/>
+    </svg>
+  </div>
   
 
   <script src="./libs/swiper/swiper-bundle.min.js"></script>

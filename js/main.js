@@ -1,12 +1,21 @@
-// Бургер
-// const burger = document.getElementById("burger");
-// const nav = document.getElementById("nav");
+// Navbar scroll class
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 0) {
+    $("#headerScrolled").addClass("header--scrolled");
+  } else {
+    $("#headerScrolled").removeClass("header--scrolled");
+  }
+});
 
-// burger.addEventListener("click", function(){
-//   nav.classList.toggle("nav--active");
-//   burger.classList.toggle("burger--active");
-//   document.body.classList.toggle("no-scroll");
-// })
+// Бургер
+const burger = document.getElementById("burger");
+const nav = document.getElementById("nav");
+
+burger.addEventListener("click", function(){
+  nav.classList.toggle("nav--active");
+  burger.classList.toggle("burger--active");
+  document.body.classList.toggle("no-scroll");
+})
 
 const heroSlider = new Swiper(".hero-slider", {
   loop: true,
@@ -26,10 +35,9 @@ const heroSlider = new Swiper(".hero-slider", {
     },
     formatFractionTotal: function (number) {
       return ("0" + number).slice(-2);
-    }
+    },
   },
 });
-
 
 const partnersSlider = new Swiper(".partners-slider", {
   loop: true,
@@ -41,4 +49,21 @@ const partnersSlider = new Swiper(".partners-slider", {
     disableOnInteraction: false,
   },
   speed: 3000,
+});
+
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 50) {
+    $("#scrollUp").fadeIn();
+  } else {
+    $("#scrollUp").fadeOut();
+  }
+});
+$("#scrollUp").click(function () {
+  $("body,html").animate(
+    {
+      scrollTop: 0,
+    },
+    500
+  );
+  return false;
 });
