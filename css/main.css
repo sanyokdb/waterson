@@ -1324,13 +1324,27 @@ h1, h2, h3, h4, h5 {
   font-size: 16px;
 }
 .footer__bottom a {
-  color: #b5b5b5;
+  color: #9b9b9b;
 }
 .footer__bottom-container {
   display: flex;
   justify-content: space-between;
   gap: 10px 30px;
 }
+.footer__greatweb-link {
+  position: relative;
+  display: inline-block;
+}
+.footer__greatweb-link::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: #9b9b9b;
+}
+
 .scrollup {
   position: fixed;
   bottom: 20px;
